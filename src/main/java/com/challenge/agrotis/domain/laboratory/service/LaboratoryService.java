@@ -56,11 +56,6 @@ public class LaboratoryService {
             throw new IllegalArgumentException("Quantidade de pessoas deve ser maior que zero");
         }
         List<Laboratorio> listLaboratories = filterLaboratoriesByNumberPeople(minNumberPeople);
-        
-        System.out.println(listLaboratories);
-        for (Laboratorio laboratory : listLaboratories) {
-            System.out.println(laboratory.getPersons().size());
-        }
 
         // Filtrar pela palavra em observação
         if (findWordObservation != null && !findWordObservation.isBlank()) {
@@ -74,10 +69,8 @@ public class LaboratoryService {
                 
                 if (!hasObservation) {
                     iterator.remove();
-                    System.out.println("REMOVIDO " + laboratory);
                 }
             }
-            System.out.println("======== FILTRADO PELA OBSERVAÇÃO =======");
         }
 
         // Filtragem pela Data Inicial (Começo e Fim)

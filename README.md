@@ -65,13 +65,10 @@ Os filtros foram feitos considerando a **filtragem de Laboratórios**, ou seja, 
 **Os campos opcionais só farão parte da consulta caso sejam informados na
 querystring do endpoint.**
 
-## Testes unitários para cada serviço
-Listagem de serviços:
-	`PersonService`
-
-
 ## Collection Postman
+Os teste foram feitos usando o Insomnia e depois importados para o Postman
 
+Link Postman: https://www.postman.com/cryosat-observer-21830937/challenge-agrotis/collection/vnsfxus/challenge-agrotis?action=share&creator=37778986
 
 ## JSON de chamada para o serviço de cadastro de Pessoa
 
