@@ -106,6 +106,8 @@ Os dados necessários são:
 	id
 	nome
 
+![alt text](image.png)
+
 ### Considerações de consistência dos dados
 Uma Pessoa tem apenas uma propriedade
 Um Laboratório tem uma ou várias pessoas
