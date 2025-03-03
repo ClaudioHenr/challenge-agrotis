@@ -1,5 +1,7 @@
 package com.challenge.agrotis.domain.person.model;
 
+import com.challenge.agrotis.domain.person.dto.PropertyDTO;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -23,5 +25,10 @@ public class Propriedade {
 
     @Column(nullable = false)
     private String nome;
+
+    public Propriedade(PropertyDTO propertyDTO) {
+        this.id = propertyDTO.id();
+        this.nome = propertyDTO.nome();
+    }
 
 }

@@ -2,6 +2,9 @@ package com.challenge.agrotis.domain.person.model;
 
 import java.time.Instant;
 
+import com.challenge.agrotis.domain.person.dto.PersonDTO;
+
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -37,15 +40,24 @@ public class Pessoa {
     @Column
     private Instant dataFinal;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "id_propriedade")
     private Propriedade infosPropriedade;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.PERSIST)
     private Laboratorio laboratorio;
 
     @Column
     private String observacoes;
+
+    public Pessoa(PersonDTO personDTO) {
+        this.nome = personDTO.nome();
+        this.dataInicial = personDTO.dataInicial();
+        this.dataFinal = personDTO.dataFinal();
+        this.infosPropriedade = new Propriedade(personDTO.infosPropriedade());
+        this.laboratorio = new Laboratorio(personDTO.laboratorio());
+        this.observacoes = personDTO.observacoes();
+    }
 
     public Pessoa(String nome, Instant dateInicial, Instant dateFinal, Propriedade infosPropriedade, Laboratorio laboratorio, String observacoes) {
         this.nome = nome;

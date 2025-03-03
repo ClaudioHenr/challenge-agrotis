@@ -2,6 +2,8 @@ package com.challenge.agrotis.domain.person.model;
 
 import java.util.List;
 
+import com.challenge.agrotis.domain.person.dto.LaboratoryDTO;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -35,5 +37,10 @@ public class Laboratorio {
     public Laboratorio(Long id, String nome) {
         this.id = id;
         this.nome = nome;
+    }
+
+    public Laboratorio(LaboratoryDTO laboratoryDTO) {
+        this.id = laboratoryDTO.id();
+        this.nome = laboratoryDTO.nome();
     }
 }
