@@ -1,4 +1,4 @@
-package com.challenge.agrotis.domain.person.controller;
+package com.challenge.agrotis.controller;
 
 import java.util.List;
 
@@ -10,9 +10,9 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.challenge.agrotis.domain.person.dto.PersonDTO;
-import com.challenge.agrotis.domain.person.mapper.PersonMapper;
 import com.challenge.agrotis.domain.person.service.PersonService;
+import com.challenge.agrotis.dto.PersonDTO;
+import com.challenge.agrotis.mapper.PersonMapper;
 
 import jakarta.validation.Valid;
 
@@ -35,8 +35,8 @@ public class PersonController {
 
     @PostMapping("/create")
     public ResponseEntity<PersonDTO> createPerson(@Valid @RequestBody PersonDTO personDTO) {
-        personService.createPerson(personDTO);
-        return ResponseEntity.status(HttpStatus.CREATED).body(personDTO);
+        PersonDTO newPersonDTO = personService.createPerson(personDTO);
+        return ResponseEntity.status(HttpStatus.CREATED).body(newPersonDTO);
     }
 
     @GetMapping("/list")

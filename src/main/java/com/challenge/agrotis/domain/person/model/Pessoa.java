@@ -2,9 +2,10 @@ package com.challenge.agrotis.domain.person.model;
 
 import java.time.Instant;
 
-import com.challenge.agrotis.domain.person.dto.PersonDTO;
+import com.challenge.agrotis.domain.laboratory.model.Laboratorio;
+import com.challenge.agrotis.domain.property.model.Propriedade;
+import com.challenge.agrotis.dto.PersonDTO;
 
-import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -19,6 +20,7 @@ import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 @Data
 @AllArgsConstructor
@@ -40,11 +42,13 @@ public class Pessoa {
     @Column
     private Instant dataFinal;
 
-    @OneToOne(cascade = CascadeType.PERSIST)
+    @OneToOne
     @JoinColumn(name = "id_propriedade")
     private Propriedade infosPropriedade;
 
-    @ManyToOne(cascade = CascadeType.PERSIST)
+    @ManyToOne
+    @JoinColumn(name = "id_laboratorio")
+    @ToString.Exclude
     private Laboratorio laboratorio;
 
     @Column

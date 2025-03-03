@@ -9,12 +9,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.test.context.ActiveProfiles;
 
-import com.challenge.agrotis.domain.person.dto.LaboratoryDTO;
-import com.challenge.agrotis.domain.person.dto.PersonDTO;
-import com.challenge.agrotis.domain.person.dto.PropertyDTO;
-import com.challenge.agrotis.domain.person.model.Laboratorio;
+import com.challenge.agrotis.domain.laboratory.model.Laboratorio;
 import com.challenge.agrotis.domain.person.model.Pessoa;
-import com.challenge.agrotis.domain.person.model.Propriedade;
+import com.challenge.agrotis.domain.property.model.Propriedade;
+import com.challenge.agrotis.dto.LaboratoryDTO;
+import com.challenge.agrotis.dto.PersonDTO;
+import com.challenge.agrotis.dto.PropertyDTO;
 
 import static org.assertj.core.api.Assertions.*;
 

@@ -1,20 +1,22 @@
-package com.challenge.agrotis.domain.person.model;
+package com.challenge.agrotis.domain.laboratory.model;
 
 import java.util.List;
 
-import com.challenge.agrotis.domain.person.dto.LaboratoryDTO;
+import com.challenge.agrotis.domain.person.model.Pessoa;
+import com.challenge.agrotis.dto.LaboratoryDTO;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 @Data
 @AllArgsConstructor
@@ -30,8 +32,8 @@ public class Laboratorio {
     @Column
     private String nome;
 
-    @OneToMany
-    @JoinColumn(name = "id_laboratorio")
+    @OneToMany(mappedBy = "laboratorio", fetch = FetchType.EAGER)
+    @ToString.Exclude
     private List<Pessoa> persons;
 
     public Laboratorio(Long id, String nome) {

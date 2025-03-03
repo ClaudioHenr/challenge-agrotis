@@ -7,15 +7,15 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.challenge.agrotis.domain.person.dto.PersonDTO;
-import com.challenge.agrotis.domain.person.exception.NotFoundException;
-import com.challenge.agrotis.domain.person.mapper.PersonMapper;
-import com.challenge.agrotis.domain.person.model.Laboratorio;
+import com.challenge.agrotis.domain.laboratory.model.Laboratorio;
+import com.challenge.agrotis.domain.laboratory.repository.LaboratoryRepository;
 import com.challenge.agrotis.domain.person.model.Pessoa;
-import com.challenge.agrotis.domain.person.model.Propriedade;
-import com.challenge.agrotis.domain.person.repository.LaboratoryRepository;
 import com.challenge.agrotis.domain.person.repository.PersonRepository;
-import com.challenge.agrotis.domain.person.repository.PropertyRepository;
+import com.challenge.agrotis.domain.property.model.Propriedade;
+import com.challenge.agrotis.domain.property.repository.PropertyRepository;
+import com.challenge.agrotis.dto.PersonDTO;
+import com.challenge.agrotis.exception.NotFoundException;
+import com.challenge.agrotis.mapper.PersonMapper;
 
 @Service
 public class PersonService {

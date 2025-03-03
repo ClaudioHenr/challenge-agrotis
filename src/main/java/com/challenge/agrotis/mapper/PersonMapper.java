@@ -1,13 +1,13 @@
-package com.challenge.agrotis.domain.person.mapper;
+package com.challenge.agrotis.mapper;
 
 import org.springframework.stereotype.Component;
 
-import com.challenge.agrotis.domain.person.dto.LaboratoryDTO;
-import com.challenge.agrotis.domain.person.dto.PersonDTO;
-import com.challenge.agrotis.domain.person.dto.PropertyDTO;
-import com.challenge.agrotis.domain.person.model.Laboratorio;
+import com.challenge.agrotis.domain.laboratory.model.Laboratorio;
 import com.challenge.agrotis.domain.person.model.Pessoa;
-import com.challenge.agrotis.domain.person.model.Propriedade;
+import com.challenge.agrotis.domain.property.model.Propriedade;
+import com.challenge.agrotis.dto.LaboratoryDTO;
+import com.challenge.agrotis.dto.PersonDTO;
+import com.challenge.agrotis.dto.PropertyDTO;
 
 @Component
 public class PersonMapper {

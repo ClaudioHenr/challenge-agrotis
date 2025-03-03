@@ -1,4 +1,4 @@
-package com.challenge.agrotis.domain.person.dto;
+package com.challenge.agrotis.dto;
 
 import java.time.Instant;
 

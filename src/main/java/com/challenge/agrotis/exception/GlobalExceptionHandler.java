@@ -1,4 +1,4 @@
-package com.challenge.agrotis.domain.person.exception;
+package com.challenge.agrotis.exception;
 
 import java.util.HashMap;
 import java.util.List;

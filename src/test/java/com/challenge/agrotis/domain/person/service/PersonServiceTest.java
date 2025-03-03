@@ -2,17 +2,17 @@ package com.challenge.agrotis.domain.person.service;
 
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.challenge.agrotis.domain.person.dto.LaboratoryDTO;
-import com.challenge.agrotis.domain.person.dto.PersonDTO;
-import com.challenge.agrotis.domain.person.dto.PropertyDTO;
-import com.challenge.agrotis.domain.person.exception.NotFoundException;
-import com.challenge.agrotis.domain.person.mapper.PersonMapper;
-import com.challenge.agrotis.domain.person.model.Laboratorio;
+import com.challenge.agrotis.domain.laboratory.model.Laboratorio;
+import com.challenge.agrotis.domain.laboratory.repository.LaboratoryRepository;
 import com.challenge.agrotis.domain.person.model.Pessoa;
-import com.challenge.agrotis.domain.person.model.Propriedade;
-import com.challenge.agrotis.domain.person.repository.LaboratoryRepository;
 import com.challenge.agrotis.domain.person.repository.PersonRepository;
-import com.challenge.agrotis.domain.person.repository.PropertyRepository;
+import com.challenge.agrotis.domain.property.model.Propriedade;
+import com.challenge.agrotis.domain.property.repository.PropertyRepository;
+import com.challenge.agrotis.dto.LaboratoryDTO;
+import com.challenge.agrotis.dto.PersonDTO;
+import com.challenge.agrotis.dto.PropertyDTO;
+import com.challenge.agrotis.exception.NotFoundException;
+import com.challenge.agrotis.mapper.PersonMapper;
 
 import static org.assertj.core.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;

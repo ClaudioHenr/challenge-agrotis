@@ -1,6 +1,6 @@
-package com.challenge.agrotis.domain.person.model;
+package com.challenge.agrotis.domain.property.model;
 
-import com.challenge.agrotis.domain.person.dto.PropertyDTO;
+import com.challenge.agrotis.dto.PropertyDTO;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

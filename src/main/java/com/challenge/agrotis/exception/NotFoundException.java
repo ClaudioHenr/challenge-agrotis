@@ -1,4 +1,4 @@
-package com.challenge.agrotis.domain.person.exception;
+package com.challenge.agrotis.exception;
 
 public class NotFoundException extends RuntimeException {
     public NotFoundException(String message) {
